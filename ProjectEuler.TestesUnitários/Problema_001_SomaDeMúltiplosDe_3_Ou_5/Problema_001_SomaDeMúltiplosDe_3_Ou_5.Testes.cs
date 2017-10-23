@@ -12,12 +12,9 @@ namespace ProjectEuler.TestesUnitários.Problema_001_SomaDeMúltiplosDe_3_Ou_5
         {
             var resultadoDeMúltiplosDe_5_Entre_0_E_9 = new List<int>() { 5 };
             var númeroQueSeDesejaIdentificarOsMúltiplos = 5;
-            var inícioDoIntervaloDesejado = 0;
-            var fimDoIntervaloDesejado = 9;
-
-            var períodoDe_0_A_9 = new Período(inícioDoIntervaloDesejado, fimDoIntervaloDesejado);
+            
             var operaçõesMatemáticas = new OperaçõesMatemáticas();
-            var múltiplosDe_5_Entre_0_E_9 = operaçõesMatemáticas.IdentificarMúltiplosDeUmNúmeroEmUmPeríodo(númeroQueSeDesejaIdentificarOsMúltiplos, períodoDe_0_A_9);
+            var múltiplosDe_5_Entre_0_E_9 = operaçõesMatemáticas.IdentificarMúltiplosDeUmNúmeroEmUmPeríodo(númeroQueSeDesejaIdentificarOsMúltiplos, new Período(0,9));
 
             múltiplosDe_5_Entre_0_E_9.Should().BeEquivalentTo(resultadoDeMúltiplosDe_5_Entre_0_E_9);
         }
@@ -27,12 +24,9 @@ namespace ProjectEuler.TestesUnitários.Problema_001_SomaDeMúltiplosDe_3_Ou_5
         {
             var resultadoDeMúltiplosDe_3_Entre_0_E_9 = new List<int>() { 3, 6, 9 };
             var númeroQueSeDesejaIdentificarOsMúltiplos = 3;
-            var inícioDoIntervaloDesejado = 0;
-            var fimDoIntervaloDesejado = 9;
-
-            var períodoDe_0_A_9 = new Período(inícioDoIntervaloDesejado, fimDoIntervaloDesejado);
+            
             var operaçõesMatemáticas = new OperaçõesMatemáticas();
-            var múltiplosDe_3_Entre_0_E_9 = operaçõesMatemáticas.IdentificarMúltiplosDeUmNúmeroEmUmPeríodo(númeroQueSeDesejaIdentificarOsMúltiplos, períodoDe_0_A_9);
+            var múltiplosDe_3_Entre_0_E_9 = operaçõesMatemáticas.IdentificarMúltiplosDeUmNúmeroEmUmPeríodo(númeroQueSeDesejaIdentificarOsMúltiplos, new Período(0, 9));
 
             múltiplosDe_3_Entre_0_E_9.Should().BeEquivalentTo(resultadoDeMúltiplosDe_3_Entre_0_E_9);
         }
