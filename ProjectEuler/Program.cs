@@ -1,5 +1,5 @@
 ﻿using System;
-using ProjectEuler.Problema_001_SomaDeMúltiplosDe_3_Ou_5;
+using ProjectEuler.Problema001SomaDeMúltiplosDe3Ou5;
 
 namespace ProjectEuler
 {
@@ -7,10 +7,10 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            var resoluçãoDoProblema_001 = new ResoluçãoProblema_001_SomaDeMúltiplosDe_3_Ou_5();
-            var respostaParaProblema_001 = resoluçãoDoProblema_001.SomaDosMúltiplosDe_3_Ou_5_Entre_0_E_999();
+            var resoluçãoDoProblema001 = new ResoluçãoProblema001SomaDeMúltiplosDe3Ou5();
+            var respostaParaProblema001 = resoluçãoDoProblema001.SomaDosMúltiplosDe3Ou5NoPeríodo();
 
-            Console.WriteLine($"Resposta do Problema 001 = { respostaParaProblema_001 }");
+            Console.WriteLine($"Resposta do Problema 001 = { respostaParaProblema001 }");
         }
     }
 }

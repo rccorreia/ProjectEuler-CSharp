@@ -1,4 +1,4 @@
-﻿namespace ProjectEuler.Problema_001_SomaDeMúltiplosDe_3_Ou_5
+﻿namespace ProjectEuler.Problema001SomaDeMúltiplosDe3Ou5
 {
     public class Período
     {

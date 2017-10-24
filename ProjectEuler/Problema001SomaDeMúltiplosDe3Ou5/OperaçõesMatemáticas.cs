@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ProjectEuler.Problema_001_SomaDeMúltiplosDe_3_Ou_5
+namespace ProjectEuler.Problema001SomaDeMúltiplosDe3Ou5
 {
     public class OperaçõesMatemáticas
     {
-        private int _InícioDoPeríodo;
-        private int _FimDoPeríodo;
+        private int _inícioDoPeríodo;
+        private int _fimDoPeríodo;
 
         public List<int> IdentificarMúltiplosDeUmNúmeroEmUmPeríodo(int número, Período período)
         {
             if (número == 0)
                 throw new Exception("O número deve ser diferente de zero");
 
-            _InícioDoPeríodo = período.Início;
-            _FimDoPeríodo = período.Fim;
+            _inícioDoPeríodo = período.Início;
+            _fimDoPeríodo = período.Fim;
 
             var listaDeMúltiplos = new List<int>();
 
-            for(int i = _InícioDoPeríodo; i <= _FimDoPeríodo; i++)
+            for(int i = _inícioDoPeríodo; i <= _fimDoPeríodo; i++)
             {
                 if (i == 0) continue;
 
@@ -34,6 +34,5 @@ namespace ProjectEuler.Problema_001_SomaDeMúltiplosDe_3_Ou_5
         {
             return listaDeNúmeros.Sum();
         }
-
     }
 }
