@@ -44,12 +44,12 @@ namespace ProjectEuler.TestesUnitários
         [Fact]
         public void DeveRetornarOValorResultanteDaSomaDeMúltiplosDe3Ou5ComoResoluçãoDoProblema001()
         {
-            var resultadoDaSomaDeMúltiplos = 233168;
+            var resultadoDaSomaDeMúltiplosDe3Ou5Entre0E999 = 233168;
 
             var resoluçãoDoProblema001 = new ResoluçãoProblema001SomaDeMúltiplosDe3Ou5();
             var respostaParaProblema001 = resoluçãoDoProblema001.SomaDosMúltiplosDe3Ou5NoPeríodo();
 
-            respostaParaProblema001.Should().Be(resultadoDaSomaDeMúltiplos);
+            respostaParaProblema001.Should().Be(resultadoDaSomaDeMúltiplosDe3Ou5Entre0E999);
         }
     }
 }
