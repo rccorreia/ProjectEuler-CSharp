@@ -8,27 +8,16 @@ namespace ProjectEuler.TestesUnitários
     public class Problem001SumOfMultiplesOf3Or5
     {
         [Fact]
-        public void ShouldReturnTheMultiplesOf5InTheGivenPeriod()
+        public void ShouldReturnTheMultiplesOfASpecifiedNumberInTheGivenPeriod()
         {
             var multiplesOf5 = new List<int>() { 5 };
             var mathOperations = new MathOperationsForProblem001();
 
-            var multiplesOf5InTheGivenPeriod = mathOperations.IdentifyMultiplesOfANumberInAPeriod(5, new Period(0,9));
+            var multiplesOf5InTheGivenPeriod = mathOperations.IdentifyMultiplesOfANumberInAPeriod(5, new Period(0, 9));
 
             multiplesOf5InTheGivenPeriod.Should().BeEquivalentTo(multiplesOf5);
         }
-
-        [Fact]
-        public void ShouldReturnTheMultiplesOf3InTheGivenPeriod()
-        {
-            var multiplesOf3 = new List<int>() { 3, 6, 9 };
-            var mathOperations = new MathOperationsForProblem001();
-
-            var multiplesOf3InTheGivenPeriod = mathOperations.IdentifyMultiplesOfANumberInAPeriod(3, new Period(0, 9));
-
-            multiplesOf3InTheGivenPeriod.Should().BeEquivalentTo(multiplesOf3);
-        }
-        
+                
         [Fact]
         public void ShouldReturnTheSumOfAListOfNumbers()
         {

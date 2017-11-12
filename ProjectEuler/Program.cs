@@ -1,6 +1,6 @@
 ﻿using System;
 using ProjectEuler.Problem001SumOfMultiplesOf3Or5;
-using ProjectEuler.Problema002SomaDeNúmerosParesFibonacci;
+using ProjectEuler.Problem002EvenFibonacciNumbers;
 
 namespace ProjectEuler
 {
@@ -11,12 +11,12 @@ namespace ProjectEuler
             var problem001Resolution = new Problem001Resolution();
             var problem001Answer = problem001Resolution.SumOfAllTheMultiplesOf3Or5Below1000();
 
-            Console.WriteLine($"Answer to Problem 001 = { problem001Answer }");
+            Console.WriteLine($"Problem 001 Answer = { problem001Answer }");
 
-            var resoluçãoDoProblema002 = new ResoluçãoProblema002SomaDeNúmerosParesFibonacci();
-            var respostaParaProblema002 = resoluçãoDoProblema002.SomaDosNúmerosParesFibonacciAté4Milhões();
+            var problem002Resolution = new Problem002Resolution();
+            var problem002Answer = problem002Resolution.SumOfTheEvenNumbersBelow4Million();
 
-            Console.WriteLine($"Resposta do Problema 002 = { respostaParaProblema002 }");
+            Console.WriteLine($"Problem 002 Answer = { problem002Answer }");
         }
     }
 }
