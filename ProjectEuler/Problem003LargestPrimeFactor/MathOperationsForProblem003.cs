@@ -13,46 +13,53 @@ namespace ProjectEuler.Problem003LargestPrimeFactor
                 return GetLargestPrimeFactorFromOddNumber(number);
         }
 
-        private long GetLargestPrimeFactorFromEvenNumber(long evenNumber)
+        private long GetLargestPrimeFactorFromEvenNumber(long number)
         {
-            long auxiliaryNumber = evenNumber / 2;
-            long largestPrimeFactor;
+            while (SharedMathOperations.IsEvenNumber(number))
+                number = number / 2;
 
-            while (SharedMathOperations.IsEvenNumber(auxiliaryNumber))
-                auxiliaryNumber = auxiliaryNumber / 2;
-
-            largestPrimeFactor = auxiliaryNumber;
-
-            return largestPrimeFactor;
+            return number;
         }
 
         private long GetLargestPrimeFactorFromOddNumber(long oddNumber)
         {
-            long largestPrimeFactor;
             if (oddNumber <= 1) return 0;
+            long lastFactor = 0;
+            long factor = 3;
+
             long auxiliaryNumber = oddNumber;
+            var maxFactor = MaxPrimeFactorOfGivenNumber(auxiliaryNumber);
 
-            long fator = 3;
-            var fatorMáximo = Math.Sqrt(auxiliaryNumber);
-            long últimoFator = 0;
-
-            while (auxiliaryNumber > 1 && fator <= fatorMáximo)
+            while (auxiliaryNumber > 1 && factor <= maxFactor)
             {
-                if (auxiliaryNumber % fator == 0)
+                if (IsFactorDivisorOfNumber(factor, auxiliaryNumber))
                 {
-                    auxiliaryNumber = auxiliaryNumber / fator;
-                    últimoFator = fator;
-                    while (auxiliaryNumber % fator == 0)
-                        auxiliaryNumber = auxiliaryNumber / fator;
+                    auxiliaryNumber = auxiliaryNumber / factor;
+                    lastFactor = factor;
+                    while (IsFactorDivisorOfNumber(factor, auxiliaryNumber))
+                        auxiliaryNumber = auxiliaryNumber / factor;
 
-                    fatorMáximo = Math.Sqrt(auxiliaryNumber);
+                    maxFactor = MaxPrimeFactorOfGivenNumber(auxiliaryNumber);
                 }
 
-                fator += 2;
+                factor = NextEvenNumber(factor);
             }
-            largestPrimeFactor = auxiliaryNumber;
+            return auxiliaryNumber;
+        }
 
-            return largestPrimeFactor;
+        private double MaxPrimeFactorOfGivenNumber(long number)
+        {
+            return Math.Sqrt(number);
+        }
+
+        private long NextEvenNumber(long number)
+        {
+            return number + 2;
+        }
+
+        private bool IsFactorDivisorOfNumber(long factor, long number)
+        {
+            return number % factor == 0;
         }
     }
 }
