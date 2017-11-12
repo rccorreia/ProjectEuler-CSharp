@@ -3,7 +3,7 @@ using ProjectEuler.Problem001SumOfMultiplesOf3Or5;
 using System.Collections.Generic;
 using Xunit;
 
-namespace ProjectEuler.TestesUnitários
+namespace ProjectEuler.UnitTest
 {
     public class Problem001SumOfMultiplesOf3Or5
     {
@@ -13,7 +13,7 @@ namespace ProjectEuler.TestesUnitários
             var multiplesOf5 = new List<int>() { 5 };
             var mathOperations = new MathOperationsForProblem001();
 
-            var multiplesOf5InTheGivenPeriod = mathOperations.IdentifyMultiplesOfANumberInAPeriod(5, new Period(0, 9));
+            var multiplesOf5InTheGivenPeriod = mathOperations.GetMultiplesOfANumberInAPeriod(5, new Period(0, 9));
 
             multiplesOf5InTheGivenPeriod.Should().BeEquivalentTo(multiplesOf5);
         }

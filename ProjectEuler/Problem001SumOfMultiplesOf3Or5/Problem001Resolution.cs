@@ -10,8 +10,8 @@ namespace ProjectEuler.Problem001SumOfMultiplesOf3Or5
             var mathOperations = new MathOperationsForProblem001();
             var multiplesOf3Or5 = new List<int>();
 
-            var multiplesOf3 = mathOperations.IdentifyMultiplesOfANumberInAPeriod(3, new Period(0, 999));
-            var multiplesOf5 = mathOperations.IdentifyMultiplesOfANumberInAPeriod(5, new Period(0, 999));
+            var multiplesOf3 = mathOperations.GetMultiplesOfANumberInAPeriod(3, new Period(0, 999));
+            var multiplesOf5 = mathOperations.GetMultiplesOfANumberInAPeriod(5, new Period(0, 999));
 
             multiplesOf3Or5.AddRange(multiplesOf3);
             multiplesOf3Or5.AddRange(multiplesOf5);

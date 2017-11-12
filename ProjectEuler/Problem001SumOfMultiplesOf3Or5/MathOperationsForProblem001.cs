@@ -6,7 +6,7 @@ namespace ProjectEuler.Problem001SumOfMultiplesOf3Or5
 {
     public class MathOperationsForProblem001
     {
-        public List<int> IdentifyMultiplesOfANumberInAPeriod(int number, Period period)
+        public List<int> GetMultiplesOfANumberInAPeriod(int number, Period period)
         {
             if (number == 0)
                 throw new Exception("The number should not be zero");

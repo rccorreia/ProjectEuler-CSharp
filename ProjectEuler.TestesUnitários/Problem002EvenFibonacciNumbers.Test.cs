@@ -3,7 +3,7 @@ using ProjectEuler.Problem002EvenFibonacciNumbers;
 using System.Collections.Generic;
 using Xunit;
 
-namespace ProjectEuler.TestesUnitários
+namespace ProjectEuler.UnitTest
 {
     public class Problem002EvenFibonacciNumbers
     {

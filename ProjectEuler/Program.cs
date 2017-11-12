@@ -1,6 +1,7 @@
 ﻿using System;
 using ProjectEuler.Problem001SumOfMultiplesOf3Or5;
 using ProjectEuler.Problem002EvenFibonacciNumbers;
+using ProjectEuler.Problem003LargestPrimeFactor;
 
 namespace ProjectEuler
 {
@@ -17,6 +18,11 @@ namespace ProjectEuler
             var problem002Answer = problem002Resolution.SumOfTheEvenNumbersBelow4Million();
 
             Console.WriteLine($"Problem 002 Answer = { problem002Answer }");
+
+            var problem003Resolution = new Problem003Resolution();
+            var problem003Answer = problem003Resolution.GetTheLargestPrimeFactorOfTheNumber600851475143();
+
+            Console.WriteLine($"Problem 003 Answer = { problem003Answer }");
         }
     }
 }
