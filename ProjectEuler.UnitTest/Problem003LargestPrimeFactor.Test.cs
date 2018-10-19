@@ -1,12 +1,13 @@
 ﻿using FluentAssertions;
+using NUnit.Framework;
 using ProjectEuler.Problem003LargestPrimeFactor;
-using Xunit;
 
 namespace ProjectEuler.UnitTest
 {
+    [TestFixture]
     public class Problema003MaiorFatorPrimo
     {
-        [Fact]
+        [Test]
         public void ShouldReturnTheLargestPrimeFactorOfTheGivenNumber()
         {
             var largestPrimeFator = 29;
@@ -17,7 +18,7 @@ namespace ProjectEuler.UnitTest
             answerLargestPrimeFactor.Should().Be(largestPrimeFator);
         }
 
-        [Fact]
+        [Test]
         public void ShouldReturnTheLargestPrimeFactorOfTheNumber600851475143AsAnswerForProblem003()
         {
             var answerForTheLargestPrimeFactorOfTheNumber600851475143 = 6857;

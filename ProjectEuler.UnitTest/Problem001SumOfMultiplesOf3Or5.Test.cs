@@ -1,13 +1,14 @@
 ﻿using FluentAssertions;
+using NUnit.Framework;
 using ProjectEuler.Problem001SumOfMultiplesOf3Or5;
 using System.Collections.Generic;
-using Xunit;
 
 namespace ProjectEuler.UnitTest
 {
+    [TestFixture]
     public class Problem001SumOfMultiplesOf3Or5
     {
-        [Fact]
+        [Test]
         public void ShouldReturnTheMultiplesOfASpecifiedNumberInTheGivenPeriod()
         {
             var multiplesOf5 = new List<int>() { 5 };
@@ -18,7 +19,7 @@ namespace ProjectEuler.UnitTest
             multiplesOf5InTheGivenPeriod.Should().BeEquivalentTo(multiplesOf5);
         }
                 
-        [Fact]
+        [Test]
         public void ShouldReturnTheSumOfAListOfNumbers()
         {
             var sumAnswer = 23;
@@ -30,7 +31,7 @@ namespace ProjectEuler.UnitTest
             sumOfAListOfNumbers.Should().Be(sumAnswer);
         }
 
-        [Fact]
+        [Test]
         public void ShouldReturnTheSumOfMultiplesOf3Or5Below1000AsAnswerForProblem001()
         {
             var answerForTheSumOfMultiplesOf3Or5Below1000 = 233168;

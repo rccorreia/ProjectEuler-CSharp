@@ -1,13 +1,14 @@
 ﻿using FluentAssertions;
+using NUnit.Framework;
 using ProjectEuler.Problem002EvenFibonacciNumbers;
 using System.Collections.Generic;
-using Xunit;
 
 namespace ProjectEuler.UnitTest
 {
+    [TestFixture]
     public class Problem002EvenFibonacciNumbers
     {
-        [Fact]
+        [Test]
         public void ShouldReturnFibonacciNumbersBelow10()
         {
             var fibonacciNumbers = new List<int>() { 1, 2, 3, 5, 8 };
@@ -18,7 +19,7 @@ namespace ProjectEuler.UnitTest
             fibonacciNumbersBelow10.Should().BeEquivalentTo(fibonacciNumbers);
         }
 
-        [Fact]
+        [Test]
         public void ShouldReturnSumOfGivenEvenNumbers()
         {
             var numbers = new List<int>() { 1, 2, 3, 5, 8 };
@@ -30,7 +31,7 @@ namespace ProjectEuler.UnitTest
             evenNumbersSum.Should().Be(evenNumbersSumFromList);
         }
 
-        [Fact]
+        [Test]
         public void ShouldReturnTheSumOfEvenFibonacciNumbersBelow4MillionAsAnswerForProblem002()
         {
             var answerForTheSumOfEvenFibonacciNumbersBelow4Million = 4613732;
