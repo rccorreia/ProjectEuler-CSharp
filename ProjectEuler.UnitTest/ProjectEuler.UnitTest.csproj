@@ -2,15 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeFrameworkVersion>2.1.5</RuntimeFrameworkVersion>    
+    <RuntimeFrameworkVersion>2.1.4</RuntimeFrameworkVersion>    
 
-    <IsPackable>false</IsPackable>
+    <IsPackable>false</IsPackable>    
+
+    <ApplicationIcon />    
+
+    <OutputType>Library</OutputType>    
+
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.4.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
